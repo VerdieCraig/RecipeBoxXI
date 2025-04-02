@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecipeBox")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e8d704f2d6e43daa6374a30205d5325142ce7c47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+22a8541c99d265c0d30c8e7aa4fbdcc17aaf5b6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecipeBox")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecipeBox")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

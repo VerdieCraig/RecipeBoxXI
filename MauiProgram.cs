@@ -25,13 +25,6 @@ public static class MauiProgram
 
         builder.Services.AddMauiBlazorWebView();
 
-        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? throw new InvalidOperationException("Connection string"
-        + "'DefaultConnection' not found.");
-
-        builder.Services.AddDbContext<RecipeDbContext>(options =>
-            options.UseSqlite(connectionString));
-
         builder.Services.AddDbContextFactory<RecipeDbContext>(options =>
         {
             var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RecipeBox.db");
