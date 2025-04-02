@@ -1,0 +1,72 @@
+@page "/recipes"
+@using Bogus
+
+<h1>Recipes</h1>
+
+What would you like to make today?
+
+@if (recipes == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Servings</th>
+                <th>Prep Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recipe in recipes)
+            {
+                <tr>
+                    <td><a href="/recipes/@recipe.Recipe_Id">@recipe.Recipe_Name</a></td>
+                    <td>@recipe.Recipe_Category</td>
+                    <td>@recipe.Recipe_Servings</td>
+                    <td>@recipe.Recipe_PrepTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Recipe[]? recipes;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate asynchronous loading to demonstrate a loading indicator
+        await Task.Delay(500);
+
+        recipes = GenerateRecipeData();
+    }
+
+    private Recipe[] GenerateRecipeData()
+    {
+        var RecipeFaker = new Faker<Recipe>()
+            .RuleFor(x => x.Recipe_Id, f => Guid.NewGuid())
+            .RuleFor(x => x.Recipe_Name, f => f.Commerce.Product())
+            .RuleFor(x => x.Recipe_Ingredients, f => f.Commerce.ProductDescription())
+            .RuleFor(x => x.Recipe_Directions, f => f.Commerce.ProductDescription())
+            .RuleFor(x => x.Recipe_Category, f => f.Commerce.Categories(1).First())
+            .RuleFor(x => x.Recipe_Servings, f => f.Random.Even(2, 12))
+            .RuleFor(x => x.Recipe_PrepTime, f => f.Random.Even(10, 90));
+
+        return RecipeFaker.Generate(count: 5).ToArray();
+    }
+
+    private class Recipe
+    {
+        public Guid Recipe_Id { get; set; }
+        public string Recipe_Name { get; set; }
+        public string Recipe_Ingredients { get; set; }
+        public string Recipe_Directions { get; set; }
+        public string Recipe_Category { get; set; }
+        public int Recipe_Servings { get; set; }
+        public int Recipe_PrepTime { get; set; }
+    }
+}

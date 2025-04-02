@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\craig\\source\\repos\\RecipeBox\\obj\\Release\\net8.0-android\\scopedcss\\bundle\\RecipeBox.styles.css",
+      "PackagePath": "staticwebassets\\RecipeBox.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\craig\\source\\repos\\RecipeBox\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\craig\\source\\repos\\RecipeBox\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\craig\\source\\repos\\RecipeBox\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\craig\\source\\repos\\RecipeBox\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\craig\\source\\repos\\RecipeBox\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.RecipeBox.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.RecipeBox.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.build.RecipeBox.props",
+      "PackagePath": "build\\RecipeBox.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.buildMultiTargeting.RecipeBox.props",
+      "PackagePath": "buildMultiTargeting\\RecipeBox.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.buildTransitive.RecipeBox.props",
+      "PackagePath": "buildTransitive\\RecipeBox.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

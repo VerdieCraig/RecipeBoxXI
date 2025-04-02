@@ -1,0 +1,62 @@
+@page "/recipes/{RecipeId:guid}"
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Microsoft.EntityFrameworkCore;
+@using Microsoft.EntityFrameworkCore.Sqlite;
+@using Microsoft.Extensions.Configuration;
+@using RecipeBox.Models;
+@using RecipeBox.DataAccess;
+@using Bogus;
+
+@inject IDbContextFactory<RecipeDbContext> DbContextFactory
+
+<h1>Recipe Detail</h1>
+
+@if (errorMessage != null)
+{
+    <p style="color:red">@errorMessage</p>
+}
+else if (recipe == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h2>@recipe.Recipe_Name</h2>
+    <p>@recipe.Recipe_Category</p>
+    <p>Servings: @recipe.Recipe_Servings</p>
+    <p>Prep Time: @recipe.Recipe_PrepTime</p>
+    <h3>Ingredients</h3>
+    <p>@recipe.Recipe_Ingredients</p>
+    <h3>Directions</h3>
+    <p>@recipe.Recipe_Directions</p>
+}
+
+@code {
+    [Parameter]
+    public Guid RecipeId { get; set; }
+
+    private Recipe? recipe;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            using var dbContext = DbContextFactory.CreateDbContext();
+            recipe = await dbContext.Recipes.FindAsync(RecipeId);
+
+            if (recipe == null)
+            {
+                errorMessage = "Recipe not found.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+}
