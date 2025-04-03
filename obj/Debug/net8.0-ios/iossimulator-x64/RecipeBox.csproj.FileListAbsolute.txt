@@ -1340,6 +1340,7 @@ C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-ios\iossimulator-x64\li
 C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
+C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-ios\iossimulator-x64\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-ios\iossimulator-x64\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-ios\iossimulator-x64\scopedcss\bundle\RecipeBox.styles.css

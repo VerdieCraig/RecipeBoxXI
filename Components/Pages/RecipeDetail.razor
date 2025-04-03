@@ -42,12 +42,12 @@ else
     private Recipe? recipe;
     private string? errorMessage;
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
         try
         {
             using var dbContext = DbContextFactory.CreateDbContext();
-            recipe = await dbContext.Recipes.FindAsync(RecipeId);
+            recipe = await dbContext.Recipes.FirstOrDefaultAsync(r => r.Recipe_Id == RecipeId);
 
             if (recipe == null)
             {

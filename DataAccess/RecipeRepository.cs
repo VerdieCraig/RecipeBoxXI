@@ -7,7 +7,7 @@ using RecipeBox.Models;
 
 namespace RecipeBox.DataAccess
 {
-    public class RecipeRepository
+    public class RecipeRepository : IRecipeRepository
     {
         private readonly RecipeDbContext _RecipeDbContext;
 
@@ -16,13 +16,29 @@ namespace RecipeBox.DataAccess
             _RecipeDbContext= RecipeDbContext;
         }
 
-        public async Task<List<Recipe>> GetRecipes()
+        public async Task<List<Recipe>> GetAllRecipesAsync()
         {
             return await Task.FromResult(_RecipeDbContext.Recipes.ToList());
         }
-        public async Task<Recipe> GetRecipe(Guid Id)
+        public async Task<Recipe> GetRecipeByIdAsync(Guid id)
         {
-            return await Task.FromResult(_RecipeDbContext.Recipes.FirstOrDefault(x => x.Recipe_Id == Id));
+            return await Task.FromResult(_RecipeDbContext.Recipes.FirstOrDefault(x => x.Recipe_Id == id));
+        }
+        public async Task CreateAsync(Recipe Recipe)
+        {
+            await _RecipeDbContext.Recipes.AddAsync(Recipe);
+            await _RecipeDbContext.SaveChangesAsync();
+        }
+        public async Task UpdateAsync(Recipe Recipe)
+        {
+            _RecipeDbContext.Recipes.Update(Recipe);
+            await _RecipeDbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Recipe Recipe)
+        {
+            _RecipeDbContext.Recipes.Remove(Recipe);
+            await _RecipeDbContext.SaveChangesAsync();
         }
     }
 }

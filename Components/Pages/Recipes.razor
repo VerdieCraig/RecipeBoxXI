@@ -1,5 +1,4 @@
 @page "/recipes"
-@using Bogus
 
 <h1>Recipes</h1>
 
@@ -24,10 +23,12 @@ else
             @foreach (var recipe in recipes)
             {
                 <tr>
-                    <td><a href="/recipes/@recipe.Recipe_Id">@recipe.Recipe_Name</a></td>
+                    <td>
+                    <td><a href="/recipes/@recipe.Recipe_Id.ToString()"> @recipe.Recipe_Name </a></td>
+                    </td>                    
                     <td>@recipe.Recipe_Category</td>
                     <td>@recipe.Recipe_Servings</td>
-                    <td>@recipe.Recipe_PrepTime</td>
+                    <td>@recipe.Recipe_PrepTime min</td>
                 </tr>
             }
         </tbody>
@@ -42,21 +43,45 @@ else
         // Simulate asynchronous loading to demonstrate a loading indicator
         await Task.Delay(500);
 
-        recipes = GenerateRecipeData();
+        recipes = GetTestRecipes();
     }
 
-    private Recipe[] GenerateRecipeData()
+    // Hardcoded Test Data Instead of Bogus
+    private Recipe[] GetTestRecipes()
     {
-        var RecipeFaker = new Faker<Recipe>()
-            .RuleFor(x => x.Recipe_Id, f => Guid.NewGuid())
-            .RuleFor(x => x.Recipe_Name, f => f.Commerce.Product())
-            .RuleFor(x => x.Recipe_Ingredients, f => f.Commerce.ProductDescription())
-            .RuleFor(x => x.Recipe_Directions, f => f.Commerce.ProductDescription())
-            .RuleFor(x => x.Recipe_Category, f => f.Commerce.Categories(1).First())
-            .RuleFor(x => x.Recipe_Servings, f => f.Random.Even(2, 12))
-            .RuleFor(x => x.Recipe_PrepTime, f => f.Random.Even(10, 90));
-
-        return RecipeFaker.Generate(count: 5).ToArray();
+        return new[]
+        {
+            new Recipe
+            {
+                Recipe_Id = Guid.NewGuid(),
+                Recipe_Name = "Spaghetti Bolognese",
+                Recipe_Ingredients = "Pasta, Ground Beef, Tomato Sauce, Garlic",
+                Recipe_Directions = "1. Cook pasta. 2. Prepare sauce. 3. Mix and serve.",
+                Recipe_Category = "Italian",
+                Recipe_Servings = 4,
+                Recipe_PrepTime = 30
+            },
+            new Recipe
+            {
+                Recipe_Id = Guid.NewGuid(),
+                Recipe_Name = "Chicken Stir-Fry",
+                Recipe_Ingredients = "Chicken, Bell Peppers, Soy Sauce, Rice",
+                Recipe_Directions = "1. Sauté chicken. 2. Add vegetables. 3. Serve over rice.",
+                Recipe_Category = "Asian",
+                Recipe_Servings = 2,
+                Recipe_PrepTime = 20
+            },
+            new Recipe
+            {
+                Recipe_Id = Guid.NewGuid(),
+                Recipe_Name = "Pancakes",
+                Recipe_Ingredients = "Flour, Eggs, Milk, Sugar",
+                Recipe_Directions = "1. Mix ingredients. 2. Cook on griddle. 3. Serve with syrup.",
+                Recipe_Category = "Breakfast",
+                Recipe_Servings = 3,
+                Recipe_PrepTime = 15
+            }
+        };
     }
 
     private class Recipe

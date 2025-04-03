@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace RecipeBox.Models
 {
     public record Recipe
     {
+        [Key]
         public Guid Recipe_Id { get; set; }
 
         public string Recipe_Name { get; set; } = default!;
@@ -28,5 +29,5 @@ namespace RecipeBox.Models
         public DateTime Created_At { get; set; } = DateTime.Now;
 
         public DateTime Modified_At { get; set; } = DateTime.Now;
-        }
+    }
     }

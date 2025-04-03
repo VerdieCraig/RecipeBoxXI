@@ -235,8 +235,32 @@
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\azure.core\1.44.1\lib\net6.0\Azure.Core.dll">
+      <PackagePath>Azure.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\azure.storage.blobs\12.23.0\lib\net6.0\Azure.Storage.Blobs.dll">
+      <PackagePath>Azure.Storage.Blobs.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\azure.storage.common\12.22.0\lib\net6.0\Azure.Storage.Common.dll">
+      <PackagePath>Azure.Storage.Common.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\bogus\35.6.2\lib\net6.0\Bogus.dll">
       <PackagePath>Bogus.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\deepcloner\0.10.4\lib\netstandard1.3\DeepCloner.dll">
+      <PackagePath>DeepCloner.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\etlbox\3.7.0\lib\net8.0\ETLBox.Licensing.dll">
+      <PackagePath>ETLBox.Licensing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\etlbox\3.7.0\lib\net8.0\ETLBox.dll">
+      <PackagePath>ETLBox.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\etlbox.sqlite\3.7.0\lib\net8.0\ETLBox.SQLite.dll">
+      <PackagePath>ETLBox.SQLite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.aspnet.webapi.client\6.0.0\lib\netstandard2.0\System.Net.Http.Formatting.dll">
+      <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.aspnetcore.antiforgery\2.3.0\lib\netstandard2.0\Microsoft.AspNetCore.Antiforgery.dll">
       <PackagePath>Microsoft.AspNetCore.Antiforgery.dll</PackagePath>
@@ -372,6 +396,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.aspnetcore.webutilities\2.3.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll">
       <PackagePath>Microsoft.AspNetCore.WebUtilities.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.bcl.asyncinterfaces\7.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll">
+      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.codeanalysis.common\4.8.0\lib\net7.0\Microsoft.CodeAnalysis.dll">
       <PackagePath>Microsoft.CodeAnalysis.dll</PackagePath>
@@ -553,7 +580,7 @@
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\newtonsoft.json.bson\1.0.2\lib\netstandard2.0\Newtonsoft.Json.Bson.dll">
@@ -568,11 +595,23 @@
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.10\lib\net6.0-windows7.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.119\lib\netstandard2.1\System.Data.SQLite.dll">
+      <PackagePath>System.Data.SQLite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.clientmodel\1.1.0\lib\net6.0\System.ClientModel.dll">
+      <PackagePath>System.ClientModel.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.diagnostics.diagnosticsource\9.0.3\lib\net8.0\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.io.hashing\6.0.0\lib\net6.0\System.IO.Hashing.dll">
+      <PackagePath>System.IO.Hashing.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.io.pipelines\9.0.3\lib\net8.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.memory.data\6.0.0\lib\net6.0\System.Memory.Data.dll">
+      <PackagePath>System.Memory.Data.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.security.cryptography.pkcs\8.0.1\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll">
       <PackagePath>System.Security.Cryptography.Pkcs.dll</PackagePath>
@@ -585,6 +624,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.text.json\9.0.3\lib\net8.0\System.Text.Json.dll">
       <PackagePath>System.Text.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\system.threading.tasks.dataflow\9.0.0\lib\net8.0\System.Threading.Tasks.Dataflow.dll">
+      <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.codeanalysis.common\4.8.0\lib\net7.0\cs\Microsoft.CodeAnalysis.resources.dll">
       <PackagePath>cs\Microsoft.CodeAnalysis.resources.dll</PackagePath>
@@ -778,14 +820,14 @@
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.10\runtimes\win-x64\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.119\runtimes\win-x64\native\SQLite.Interop.dll">
+      <PackagePath>SQLite.Interop.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\RecipeBox.deps.json">
       <PackagePath>RecipeBox.deps.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\humanizer.core\2.14.1\lib\net6.0\Humanizer.dll">
       <PackagePath>Humanizer.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.bcl.asyncinterfaces\7.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll">
-      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.build.locator\1.7.8\lib\net6.0\Microsoft.Build.Locator.dll">
       <PackagePath>Microsoft.Build.Locator.dll</PackagePath>
