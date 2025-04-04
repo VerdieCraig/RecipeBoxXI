@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-04T09:14:16.812</Modified>
+      <Modified>2025-04-04T10:56:11.427</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\RecipeBox.dll">
       <PackagePath>RecipeBox.dll</PackagePath>
-      <Modified>2025-04-04T09:14:16.145</Modified>
+      <Modified>2025-04-04T10:56:10.750</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>RecipeBox.exe</PackagePath>
-      <Modified>2025-04-04T09:14:16.151</Modified>
+      <Modified>2025-04-04T10:56:10.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

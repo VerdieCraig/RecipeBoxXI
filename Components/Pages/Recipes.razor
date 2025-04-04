@@ -3,11 +3,11 @@
 @using RecipeBox.Models
 @using Microsoft.EntityFrameworkCore
 @inject IDbContextFactory<RecipeDbContext> DbContextFactory
-
+@inject IRecipeRepository RecipeRepository
 
 <h1>Recipes</h1>
 
-What would you like to make today?
+<p>What would you like to make today?</p>
 
 @if (recipes == null)
 {
@@ -42,22 +42,76 @@ else
     </table>
 }
 
-@code {
-    @code {
-        private List<Recipe>? recipes;
+<h3>Add a new recipe</h3>
+<EditForm Model="@newRecipe" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
 
-        protected override async Task OnInitializedAsync()
+    <div class="form-group">
+        <label for="Recipe_Name">Name</label>
+        <InputText id="Recipe_Name" class="form-control" @bind-Value="newRecipe.Recipe_Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="Recipe_Category">Category</label>
+        <InputText id="Recipe_Category" class="form-control" @bind-Value="newRecipe.Recipe_Category" />
+    </div>
+
+    <div class="form-group">
+        <label for="Recipe_Servings">Servings</label>
+        <InputNumber id="Recipe_Servings" class="form-control" @bind-Value="newRecipe.Recipe_Servings" />
+    </div>
+
+    <div class="form-group">
+        <label for="Recipe_PrepTime">Prep Time (min)</label>
+        <InputNumber id="Recipe_PrepTime" class="form-control" @bind-Value="newRecipe.Recipe_PrepTime" />
+    </div>
+
+    <div class="form-group">
+        <label for="Recipe_Ingredients">Ingredients</label>
+        <InputTextArea id="Recipe_Ingredients" class="form-control" @bind-Value="newRecipe.Recipe_Ingredients" />
+    </div>
+
+    <div class="form-group">
+        <label for="Recipe_Directions">Directions</label>
+        <InputTextArea id="Recipe_Directions" class="form-control" @bind-Value="newRecipe.Recipe_Directions" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Recipe</button>
+</EditForm>
+
+@code {
+    private List<Recipe> recipes;
+    private Recipe newRecipe = new Recipe();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
         {
-            try
-            {
-                // Create DbContext instance without arguments
-                using var dbContext = await DbContextFactory.CreateDbContextAsync();
-                recipes = await dbContext.Recipes.ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error loading recipes: {ex.Message}");
-            }
+            recipes = await RecipeRepository.GetAllRecipesAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading recipes: {ex.Message}");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            // Add the new recipe to the database using the RecipeRepository
+            await RecipeRepository.CreateAsync(newRecipe);
+
+            // Clear the form
+            newRecipe = new Recipe();
+
+            // Refresh the recipe list
+            recipes = await RecipeRepository.GetAllRecipesAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding recipe: {ex.Message}");
         }
     }
 }

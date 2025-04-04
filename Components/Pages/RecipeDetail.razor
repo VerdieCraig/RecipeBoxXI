@@ -9,9 +9,10 @@
 @using Microsoft.Extensions.Configuration;
 @using RecipeBox.Models;
 @using RecipeBox.DataAccess;
-@using Bogus;
+
 
 @inject IDbContextFactory<RecipeDbContext> DbContextFactory
+@inject NavigationManager NavigationManager
 
 <h1>Recipe Detail</h1>
 
@@ -34,6 +35,8 @@ else
     <h3>Directions</h3>
     <p>@recipe.Recipe_Directions</p>
 
+    <!-- Navigation Button -->
+    <button class="btn btn-secondary" @onclick="GoBackToRecipes">Back to Recipes</button>
 }
 
 @code {
@@ -59,5 +62,11 @@ else
         {
             errorMessage = $"An error occurred: {ex.Message}";
         }
+    }
+
+    private void GoBackToRecipes()
+    {
+        // Navigate back to the /recipes page
+        NavigationManager.NavigateTo("/recipes");
     }
 }
