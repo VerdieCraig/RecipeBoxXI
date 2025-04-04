@@ -45,6 +45,8 @@ dotnet run --project RecipeBox.Server
 Then, open the browser and go to:
 https://localhost:5001
 
+Note: This project does not use migrations (as it uses "Ensure Created" to create the database).
+
 ## Usage
 Adding a Recipe
 Navigate to the Recipes page and fill out the form to add a new recipe.
