@@ -8,8 +8,8 @@ A Blazor WebAssembly application for storing, managing, and sharing your favorit
 - [Installation](#installation)
 - [Usage](#usage)
 - [Capstone Features Integration](#capstone-features-integration)
-- [Contributing](#contributing)
-- [License](#license)
+- [Testing](#testing)
+- [Statement of AI Use](#statement-of-ai-use)
 
 ---
 
@@ -100,5 +100,20 @@ modelBuilder.Entity<Recipe>()
     .HasForeignKey(r => r.CategoryId);
 This enables querying recipes by category and ensures database integrity.
 
+## Testing
+This project was tested repeatedly throughout development. The following tests were performed:
+- Debugging within visual studio.
+- Debugging efforts by Code: You mentors.
+- Manual testing of the Blazor UI to ensure all features work as expected.
+- Testing on windows and android devices to ensure compatibility.
+
+## Statement of AI Use
+GitHub Copilot was used to assist in writing code snippets and for debugging purposes. 
+ChatGPT was used to untangle difficult debugging issues with dependency injection,
+to aid in integrating the c sharp code with the Blazor UI functionality, and to 
+structure an initial README file. Overall decisions about architecture and functionality
+were made by the developer.
+
 Enjoy managing your recipes with RecipeBoxXI!
 Happy Cooking!
+
