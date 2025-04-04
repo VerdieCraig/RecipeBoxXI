@@ -2386,3 +2386,7 @@ C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-android\stamp\_ConvertR
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-android\RecipeBox.csproj.Up2Date

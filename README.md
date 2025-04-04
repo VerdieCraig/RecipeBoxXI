@@ -45,7 +45,10 @@ dotnet run --project RecipeBox.Server
 Then, open the browser and go to:
 https://localhost:5001
 
-Note: This project does not use migrations (as it uses "Ensure Created" to create the database).
+Notes: 
+1. This project does not use migrations (as it uses "Ensure Created" to create the database).
+2. There are currently known issues with app launch on Android and iOS devices. 
+   It runs as expected on Windows devices.
 
 ## Usage
 Adding a Recipe
