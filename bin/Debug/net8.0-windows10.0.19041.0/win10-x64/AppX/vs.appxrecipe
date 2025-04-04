@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-03T07:47:49.082</Modified>
+      <Modified>2025-04-04T09:14:16.812</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\RecipeBox.dll">
       <PackagePath>RecipeBox.dll</PackagePath>
-      <Modified>2025-04-03T07:47:46.562</Modified>
+      <Modified>2025-04-04T09:14:16.145</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>RecipeBox.exe</PackagePath>
-      <Modified>2025-04-03T07:47:46.633</Modified>
+      <Modified>2025-04-04T09:14:16.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -303,7 +303,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\source\repos\RecipeBoxXI\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
-      <Modified>2025-04-02T17:05:52.483</Modified>
+      <Modified>2025-04-04T07:11:51.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\craig\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

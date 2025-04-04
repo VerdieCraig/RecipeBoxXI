@@ -1330,7 +1330,6 @@ C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\staticwebassets\msbuild.buildMultiTargeting.RecipeBox.props
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\staticwebassets\msbuild.buildTransitive.RecipeBox.props
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\staticwebassets.pack.json
-C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\staticwebassets.upToDateCheck.txt
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\staticwebassets.publish.json
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\staticwebassets.publish.endpoints.json
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
@@ -1379,3 +1378,15 @@ C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\RecipeBox.pdb
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\RecipeBox.genruntimeconfig.cache
 C:\Users\craig\source\repos\RecipeBoxXI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\RecipeBox.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Azure.Core.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Azure.Storage.Blobs.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Azure.Storage.Common.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\DeepCloner.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\ETLBox.Licensing.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\ETLBox.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\ETLBox.SQLite.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Net.Http.Formatting.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Data.SQLite.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.ClientModel.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.IO.Hashing.dll
+C:\Users\craig\source\repos\RecipeBoxXI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Memory.Data.dll

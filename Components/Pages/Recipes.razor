@@ -1,4 +1,9 @@
 @page "/recipes"
+@using RecipeBox.DataAccess
+@using RecipeBox.Models
+@using Microsoft.EntityFrameworkCore
+@inject IDbContextFactory<RecipeDbContext> DbContextFactory
+
 
 <h1>Recipes</h1>
 
@@ -7,6 +12,10 @@ What would you like to make today?
 @if (recipes == null)
 {
     <p><em>Loading...</em></p>
+}
+else if (!recipes.Any())
+{
+    <p>No recipes found. Try adding some!</p>
 }
 else
 {
@@ -23,9 +32,7 @@ else
             @foreach (var recipe in recipes)
             {
                 <tr>
-                    <td>
-                    <td><a href="/recipes/@recipe.Recipe_Id.ToString()"> @recipe.Recipe_Name </a></td>
-                    </td>                    
+                    <td><a href="/recipes/@recipe.Recipe_Id">@recipe.Recipe_Name</a></td>
                     <td>@recipe.Recipe_Category</td>
                     <td>@recipe.Recipe_Servings</td>
                     <td>@recipe.Recipe_PrepTime min</td>
@@ -36,62 +43,21 @@ else
 }
 
 @code {
-    private Recipe[]? recipes;
+    @code {
+        private List<Recipe>? recipes;
 
-    protected override async Task OnInitializedAsync()
-    {
-        // Simulate asynchronous loading to demonstrate a loading indicator
-        await Task.Delay(500);
-
-        recipes = GetTestRecipes();
-    }
-
-    // Hardcoded Test Data Instead of Bogus
-    private Recipe[] GetTestRecipes()
-    {
-        return new[]
+        protected override async Task OnInitializedAsync()
         {
-            new Recipe
+            try
             {
-                Recipe_Id = Guid.NewGuid(),
-                Recipe_Name = "Spaghetti Bolognese",
-                Recipe_Ingredients = "Pasta, Ground Beef, Tomato Sauce, Garlic",
-                Recipe_Directions = "1. Cook pasta. 2. Prepare sauce. 3. Mix and serve.",
-                Recipe_Category = "Italian",
-                Recipe_Servings = 4,
-                Recipe_PrepTime = 30
-            },
-            new Recipe
-            {
-                Recipe_Id = Guid.NewGuid(),
-                Recipe_Name = "Chicken Stir-Fry",
-                Recipe_Ingredients = "Chicken, Bell Peppers, Soy Sauce, Rice",
-                Recipe_Directions = "1. Sauté chicken. 2. Add vegetables. 3. Serve over rice.",
-                Recipe_Category = "Asian",
-                Recipe_Servings = 2,
-                Recipe_PrepTime = 20
-            },
-            new Recipe
-            {
-                Recipe_Id = Guid.NewGuid(),
-                Recipe_Name = "Pancakes",
-                Recipe_Ingredients = "Flour, Eggs, Milk, Sugar",
-                Recipe_Directions = "1. Mix ingredients. 2. Cook on griddle. 3. Serve with syrup.",
-                Recipe_Category = "Breakfast",
-                Recipe_Servings = 3,
-                Recipe_PrepTime = 15
+                // Create DbContext instance without arguments
+                using var dbContext = await DbContextFactory.CreateDbContextAsync();
+                recipes = await dbContext.Recipes.ToListAsync();
             }
-        };
-    }
-
-    private class Recipe
-    {
-        public Guid Recipe_Id { get; set; }
-        public string Recipe_Name { get; set; }
-        public string Recipe_Ingredients { get; set; }
-        public string Recipe_Directions { get; set; }
-        public string Recipe_Category { get; set; }
-        public int Recipe_Servings { get; set; }
-        public int Recipe_PrepTime { get; set; }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading recipes: {ex.Message}");
+            }
+        }
     }
 }
