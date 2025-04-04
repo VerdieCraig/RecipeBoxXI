@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Sqlite;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace RecipeBox.Models
 {
@@ -30,4 +23,4 @@ namespace RecipeBox.Models
 
         public DateTime Modified_At { get; set; } = DateTime.Now;
     }
-    }
+}

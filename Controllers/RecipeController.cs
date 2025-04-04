@@ -1,13 +1,7 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Mvc;
-using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RecipeBox.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using RecipeBox.DataAccess;
+using RecipeBox.Models;
+using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 
 namespace RecipeBox.Controllers
@@ -25,7 +19,7 @@ namespace RecipeBox.Controllers
         }
 
         [HttpGet("GetRecipes")]
-        
+
         public async Task<List<Recipe>> GetAllRecipesAsync()
         {
             return await _RecipeRepository.GetAllRecipesAsync();
